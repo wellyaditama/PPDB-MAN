@@ -155,7 +155,7 @@ $tgl_tutup = $setting['tgl_tutup'];
 					<div class="form-row">
 					<div class="form-group col-md-6">
 						<label for="nama">USERNAME</label>
-						 <input class="form-control" type="text" name="username"placeholder="Masukkan NISN" value="<?= $_GET['nisn'] ?>" required>
+						 <input class="form-control" type="text" name="username"placeholder="Masukkan NISN" value="<?= $_GET['nidn'] ?>" required>
 						
 					</div>
 					<div class="form-group col-md-6">

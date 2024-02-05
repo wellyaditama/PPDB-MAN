@@ -1,17 +1,19 @@
 <?php    
     function insert($koneksi, $table,$data=null) {
-        $command = 'INSERT INTO '.$table;
+        $command = "INSERT INTO ".$table;
         $field = $value = null;
         foreach($data as $f => $v) {
-            $field	.= ','.$f;
+            $field	.= ",".$f;
             $value	.= ", '".$v."'";
         }
-        $command .=' ('.substr($field,1).')';
-        $command .=' VALUES('.substr($value,1).')';
+        $command .=" (".substr($field,1).")";
+        $command .=" VALUES(".substr($value,1).")";
         $exec = mysqli_query($koneksi, $command);
-        ($exec) ? $status = 'OK' : $status = 'NO';
+        ($exec) ? $status = "OK" : $status = "NO";
         return $status;
     }
+
+    
     
     function update($koneksi, $table,$data=null,$where=null) {
         $command = 'UPDATE '.$table.' SET ';

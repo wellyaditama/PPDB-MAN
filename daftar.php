@@ -374,9 +374,11 @@ $('#form-daftar').submit(function(e) {
     						
     						
 							setTimeout(function() {
-                        window.location.href = 'konfirmasi.php?id=' + json.id + '&nisn=' + json.nisn + '&pass=' + json.pass + '&nama=' + json.nama;
-                    }, 2000);
-                   
+                        
+                window.location.href = 'konfirmasi.php?id=' + json.id + '&nidn=' + json.nisn + '&pass=' + json.pass + '&nama=' + json.nama;
+                        
+                    }, 5000);
+                    // window.location.href = 'datadaftar.php?nidn=' + json.nisn + '&pass=' + json.pass;
 
                 } else {
                     swal({

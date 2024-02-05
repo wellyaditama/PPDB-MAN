@@ -24,7 +24,8 @@ if ($pg == 'simpan') {
         $noUrut++;
         $char = "PPDB" . date('Y');
         $newID = $char . sprintf("%03s", $noUrut);
-        $nama = mysqli_escape_string($koneksi, ucwords(strtolower($_POST['nama_siswa'])));
+        $nama = mysqli_real_escape_string($koneksi, $_POST['nama_siswa']);
+        // $nama = addslashes(ucwords(strtolower($_POST['nama_siswa'])));
         $data = [
             'no_daftar' => $newID,
             'jenis' => $_POST['jenis'],
